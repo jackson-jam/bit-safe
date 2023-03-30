@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./plugins/bootstrap-3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="./plugins/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="./css/first.css">
+	<link rel="stylesheet" href="./css/first2.css">
+	<script src="./js/jquery-3.6.0.min.js"></script>
+			<script type="text/javascript">
+				$(function(){
+				
+					$(document).on( 'scroll', function(){
+						var h = $(window).scrollTop();
+						var maxh = $(document).height();
+						var currh = $(window).height();
+						var num = Math.ceil((h-100)/160);
+						var str = ".peo_box"+num;
+						if(h>100 && h<(maxh-currh-1)){
+							$(str).addClass('lishow');
+						}else if(h>=(maxh-currh-1)){
+							$('.peo_box').addClass('lishow');
+						}else{
+							$('.peo_box').removeClass('lishow');
+						}
+						
+						
+					});
+				
+				});
+				
+			</script>
+</head>
+<body>
+<div class="navbar navbar-inverse">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">项目</a>
+        </div>
+
+      
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="./buj.html">仪表盘</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">1</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">1</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">1</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./login.html">登录</a></li>
+                <li><a href="./login.html">注册</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"> 用户 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="add.html">个人资料编辑</a></li>
+                        <li><a href="#">我的账户</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</div>
+<!--主页面-->
+<div class="container">
+			<div class="top"></div>
+			<div class="bottom">
+				<div class="title">List</div>
+				<div>
+					<ul>
+						<li>
+							<div class="peo_box1 peo_box">
+							<img class="picture" src="./img/1.jpg" alt="">
+							<div class="content">
+								<h5 class="name">name1</h5>
+								<p class="p1">BiliBili is a well-known video barrage website in China, where there are the most timely animation, the best ACG atmosphere and the most creative up owner. You can find a lot of fun here</p>
+							</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="peo_box2 peo_box">
+							<img class="picture" src="./img/2.jpg" alt="">
+							<div class="content">
+								<h5 class="name">name2</h5>
+								<p class="p2">BiliBili is a well-known video barrage website in China, where there are the most timely animation, the best ACG atmosphere and the most creative up owner. You can find a lot of fun here</p>
+							</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="peo_box3 peo_box">
+							<img class="picture" src="./img/3.jpg" alt="">
+							<div class="content">
+								<h5 class="name">name3</h5>
+								<p class="p3">BiliBili is a well-known video barrage website in China, where there are the most timely animation, the best ACG atmosphere and the most creative up owner. You can find a lot of fun here</p>
+							</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="peo_box4 peo_box">
+							<img class="picture" src="./img/4.jpg" alt="">
+							<div class="content">
+								<h5 class="name">name4</h5>
+								<p class="p4">BiliBili is a well-known video barrage website in China, where there are the most timely animation, the best ACG atmosphere and the most creative up owner. You can find a lot of fun here</p>
+							</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="peo_box5 peo_box">
+							<img class="picture" src="./img/5.jpg" alt="">
+							<div class="content">
+								<h5 class="name">name5</h5>
+								<p class="p5">BiliBili is a well-known video barrage website in China, where there are the most timely animation, the best ACG atmosphere and the most creative up owner. You can find a lot of fun here</p>
+							</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+<!-- 新闻列表的版心部分 -->
+<div class="news_con">
+
+<!-- 最左侧的盒子 -->
+    <div class="news_l">
+            <h3 class="news_title">更新公告</h3>
+            <ul class="news_list">
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+                <li>
+                    <a>停机维护更新</a>
+                    <span>20210601</span>
+                </li>
+            </ul>
+
+        </div>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+<script>
+    $(function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+        $('#element').popover({trigger: "click", placement: "bottom"});
+
+        $('.carousel').carousel({
+            interval: 2000
+        })
+
+    })
+</script>
+
+ </body>
+</html>
