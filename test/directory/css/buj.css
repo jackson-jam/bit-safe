@@ -1,0 +1,74 @@
+.parent {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	}
+	
+	.content2 { grid-area: 1 / 2 / 3 / 4; }
+	.div2 { grid-area: 1 / 4 / 3 / 6; }
+	.div3 { grid-area: 3 / 2 / 5 / 4; }
+	.div4 { grid-area: 3 / 4 / 5 / 6; }
+	.content-left{ grid-area: 1 / 1 / 7 / 2; }
+	.div6 { grid-area: 5 / 2 / 7 / 4; }
+	.div7 { grid-area: 5 / 4 / 7 / 6; }
+	
+	.content-left {
+		position: fixed;
+	    width: 10%;
+	    height: 100%;
+	    background-color: cornflowerblue;
+	    left: 0;
+		top: 0;
+	}
+	
+	 .content-left a {
+	    text-decoration: none;
+	    color: #fff;
+	}
+	
+	 .content-left .left-title {
+	    height: 60px;
+	    width: 100%;
+	    font-size: 24px;
+	    text-align: center;
+	    line-height: 60px;
+	}
+	
+	 .content-left .seg {
+	    width: 100%;
+	    height: 2px;
+	    background-color: rgba(0, 170, 255, 0.2);
+	    margin: 5px 0;
+	}
+	
+	.content-left .nav .nav-menu .nav-title {
+	    color: #fff;
+	    text-align: center;
+	    width: 100%;
+	    height: 50px;
+	    line-height: 50px;
+	    font-size: 16px;
+	    cursor: pointer;
+	}
+	
+	.content-left .nav .nav-menu .nav-content {
+	    display: none;
+	}
+	
+	.content-left .nav .nav-menu .nav-content a {
+	    color: #bbb;
+	    display: block;
+	    width: 100%;
+	    height: 50px;
+	    text-align: center;
+	    line-height: 50px;
+	    font-size: 12px;
+	    background-color: rgba(0, 0, 0, .1);
+	}
+	
+	.content-left .nav .nav-menu .nav-content a:hover {
+	    background-color: rgba(0, 0, 0, .2);
+	    color: #fff;
+	}
