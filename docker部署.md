@@ -4,7 +4,7 @@ docker 部署（1）
 
 然后到mysite目录下
 
-![截屏2023-05-22 11.19.16]([https://github.com/jackson-jam/bit-safe/blob/main/%E6%88%AA%E5%B1%8F2023-05-22%2011.19.16.png])
+![image]([https://github.com/jackson-jam/bit-safe/blob/main/%E6%88%AA%E5%B1%8F2023-05-22%2011.19.16.png])
 
 然后在此目录下使用命令
 
