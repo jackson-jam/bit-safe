@@ -10,7 +10,7 @@ docker 部署（1）
 
 ```docker build -t bitsafe . ```
 
-即可构建docker镜像  ![截屏2023-05-22 11.20.44]([https://github.com/jackson-jam/bit-safe/blob/main/截屏2023-05-22 11.20.44.png])
+即可构建docker镜像  ![image](https://github.com/jackson-jam/bit-safe/blob/main/截屏2023-05-22 11.20.44.png)
 
 此时使用命令
 
