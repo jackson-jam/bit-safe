@@ -1,0 +1,177 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BitSafe</title>
+    <link type="text/css" href="{% static '/css/theme.css'%}" rel="stylesheet">
+    <link type="text/css" href="{% static '/css/demo.css'%}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+    <div class="container">
+        <a class="navbar-brand" href="../"><strong>Bit</strong>Safe</a>
+        <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main"
+                aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+            <ul class="navbar-nav ml-auto align-items-lg-center">
+                <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Menu</h6>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar_main_dropdown_1" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能界面</a>
+                    <div class="dropdown-menu" aria-labelledby="navbar_1_dropdown_1">
+                        <a class="dropdown-item" href="/user1">用户主页</a>
+                        <a class="dropdown-item" href="/login">登陆</a>
+                        <a class="dropdown-item" href="/login">注册</a>
+                        <a class="dropdown-item" href="/buj">仪表盘</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="main">
+    <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
+             style="background-image: url('{% static '/img/backgrounds/img-1.jpg'%}')">
+        <span class="mask bg-primary alpha-7"></span>
+        <div class="spotlight-holder py-lg pt-lg-xl">
+            <div class="container d-flex align-items-center no-padding">
+                <div class="col">
+                    <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                        <div class="col-7">
+                            <div class="text-center mt-5">
+                                <img src="{% static '/img/brand/icon.png'%}" style="width: 200px;"
+                                     class="img-fluid animated" data-animation-in="jackInTheBox"
+                                     data-animation-delay="1000">
+                                <h2 class="heading display-4 font-weight-400 text-white mt-5 animated"
+                                    data-animation-in="fadeInUp" data-animation-delay="2000">
+                                    <span class="font-weight-700">Bit</span>Safe
+                                </h2>
+                                <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
+                                   data-animation-delay="2500">
+                                    不知道该填什么
+                                    <strong class="text-white">真的不知道...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice bg-tertiary bg-cover bg-size--cover"
+             style="background-image: url('{% static '/img/backgrounds/img-1.jpg'%}')">
+        <span class="mask bg-tertiary alpha-9"></span>
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                <div class="col-lg-6">
+                    <div class="card bg-dark alpha-container text-white border-0 overflow-hidden">
+                        <a href="#" target="_blank">
+                            <div class="card-img-bg"
+                                 style="background-image: url('{% static '/img/prv/paper-1.jpg'%}');"></div>
+                            <span class="mask bg-dark alpha-5 alpha-4--hover"></span>
+                            <div class="card-body px-5 py-5">
+                                <div style="min-height: 300px;">
+                                    <h3 class="heading h1 text-white mb-3">全面覆盖</h3>
+                                    <p class="mt-4 mb-1 h5 text-white lh-180">
+                                        十年安全沉淀，业界领先的恶意覆盖
+                                    </p>
+                                </div>
+                                <span href="#" class="text-white text-uppercase font-weight-500">
+                      查看详情
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-dark alpha-container text-white border-0 overflow-hidden">
+                        <a href="#" target="_blank">
+                            <div class="card-img-bg"
+                                 style="background-image: url('{% static '/img/prv/paper-2.jpg'%}');"></div>
+                            <span class="mask bg-dark alpha-5 alpha-4--hover"></span>
+                            <div class="card-body px-5 py-5">
+                                <div style="min-height: 300px;">
+                                    <h3 class="heading h1 text-white mb-3">智能查杀</h3>
+                                    <p class="mt-4 mb-1 h5 text-white lh-180">
+                                        海量多纬度数据结合人工智能算法，能快速感知，打击新的变种
+                                    </p>
+                                </div>
+                                <span href="#" class="text-white text-uppercase font-weight-500">
+                      查看详情
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="pt-5 pb-3 footer  footer-dark bg-tertiary" style="background-color: #192b3f">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="pr-lg-5">
+                    <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Bit</strong>Safe</h1>
+                    <p>确保你的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。
+                        这些文档提供信息帮助您使代码更安全。此处列出的面向 Web
+                        安全的文章提供的信息可以帮助你保护站点及其代码免受攻击和数据窃取。</p>
+                </div>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">服务支持</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">服务条款</a></li>
+                    <li><a class="text-muted" href="#">常见问题</a></li>
+                    <li><a class="text-muted" href="#">帮助文档</a></li>
+                    <li><a class="text-muted" href="#">申诉反馈</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">报告资讯</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">安全资讯</a></li>
+                    <li><a class="text-muted" href="#">产品资讯</a></li>
+                    <li><a class="text-muted" href="#">客户资讯</a></li>
+                    <li><a class="text-muted" href="#">媒体报道</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">关于我们</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">运营方式</a></li>
+                    <li><a class="text-muted" href="#">企业产品</a></li>
+                    <li><a class="text-muted" href="#">个人产品</a></li>
+                    <li><a class="text-muted" href="#">团队详情</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static '/vendor/jquery/jquery.min.js'%}"></script>
+<script src="{% static '/vendor/popper/popper.min.js'%}"></script>
+<script src="{% static '/js/bootstrap/bootstrap.min.js'%}"></script>
+<!-- FontAwesome 5 -->
+<script src="{% static '/vendor/fontawesome/js/fontawesome-all.min.js'%}" defer></script>
+<!-- Page plugins -->
+<script src="{% static '/vendor/bootstrap-select/js/bootstrap-select.min.js'%}"></script>
+<script src="{% static '/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js'%}"></script>
+<script src="{% static '/vendor/input-mask/input-mask.min.js'%}"></script>
+<script src="{% static '/vendor/nouislider/js/nouislider.min.js'%}"></script>
+<script src="{% static '/vendor/textarea-autosize/textarea-autosize.min.js'%}"></script>
+<!-- Theme JS -->
+<script src="{% static '/js/theme.js'%}"></script>
+</body>
+</html>

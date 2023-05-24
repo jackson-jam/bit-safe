@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    添加用户
+</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="prod_name" placeholder="品名">
+    <input type="text" name="prod_price" placeholder="价格">
+    <input type="text" name="prod_desc" placeholder="描述">
+     <input type="submit" value="提交">
+</form>
+</body>
+</html>

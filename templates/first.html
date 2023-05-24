@@ -1,0 +1,150 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/first.css' %}">
+    <script src="{% static 'plugins/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'js/firstuse.js' %}"></script>
+    <!-- https://fontawesome.com/v5/icons/times?s=solid -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="bg_shadow"></div>
+            <div class="sidebar_inner">
+                <div class="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="profile_info">
+                    <div class="profile_img">
+                        <img src="{% static 'img/mini program.jpg' %}" alt="">
+                    </div>
+                    <div class="profile_data">
+                        <p class="name">username</p>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            位置接口
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="siderbar_menu">
+                    <li class="active">
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="title">我的喜欢</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="title">用户详细信息</div>
+                            <div class="arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                        <ul class="accordion">
+                            <li><a href="#" class="active">子菜单1</a></li>
+                            <li><a href="#" >子菜单2</a></li>
+                            <li><a href="#" >子菜单3</a></li>
+                            <li><a href="#" >子菜单4</a></li>
+                            <li><a href="#" >子菜单5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="title">以前的订单</div>
+                            <div class="arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                        <ul class="accordion">
+                            <li><a href="#" >子菜单1</a></li>
+                            <li><a href="#" class="active">子菜单2</a></li>
+                            <li><a href="#" >子菜单3</a></li>
+                            <li><a href="#" >子菜单4</a></li>
+                            <li><a href="#" >子菜单5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="title">付款信息</div>
+                            <div class="arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </a>
+                        <ul class="accordion">
+                            <li><a href="#" >子菜单1</a></li>
+                            <li><a href="#" >子菜单2</a></li>
+                            <li><a href="#" class="active">子菜单3</a></li>
+                            <li><a href="#" >子菜单4</a></li>
+                            <li><a href="#" >子菜单5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-unlock"></i>
+                            </div>
+                            <div class="title">修改密码</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout_btn">
+                    <a href="#">退出登陆</a>
+                </div>
+            </div>
+        </div>
+        <div class="main_container">
+            <div class="navbar">
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <a href="#">嗨皮享画</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="item">
+                    item循环1
+                </div>
+                <div class="item">
+                    item循环2
+                </div>
+                <div class="item">
+                    item循环3
+                </div>
+                <div class="item">
+                    item循环4
+                </div>
+                <div class="item">
+                    item循环5
+                </div>
+                <div class="item">
+                    item循环6
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/first.js' %}"></script>
+</body>
+
+</html>

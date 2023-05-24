@@ -1,0 +1,216 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{% static 'plugins/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap-3.4.1-dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'plugins/echarts.js'%}"></script>
+    <script type="text/javascript" src="../blog/static/plugins/echarts.js"></script>
+    <script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$.post("",{
+            data: "hello"
+		},
+		function(data){
+			alert("数据: \n" + data);
+		});
+	});
+});
+</script>
+    <!--导入echarts-->
+    <script>
+         var myChart3 = echarts.init(document.getElementById('main1'));
+        $(document).ready(function(){
+	        $("button").click(function(){
+                $.post("../blog/views.py/get_search",
+		        function(data){
+            option = {
+                tooltip: {
+                    trigger: 'item'
+                },
+                legend: {
+                    orient: 'horizontal',
+                    top: 'bottom',
+                    padding: 0,
+                },
+                toolbox: {
+                    show: true,
+                    right: 50,
+                    feature: {
+                        dataView: {readOnly: false},
+                        saveAsImage: {}, //保存为图片
+                    }
+                },
+                series: [
+                    {
+                        name: '搜索类型频率',
+                        type: 'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            show: false,
+                            position: 'center',
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '30',
+                                fontWeight: 'bold',
+                            }
+                        },
+                        data: data  //data为后端返回的json数据
+                    }
+                ]
+            };
+
+            {#console.log(data);#}
+            myChart3.setOption(option);
+                    alert("数据: \n" + data);
+		        });
+	        });
+        });
+    </script>
+{% comment %}<script>
+        {#初始化 echarts 对象#}
+        var mychart = echarts.init(document.getElementById('lchart'));
+        var series_data = [];
+        var xAxis_data = [];
+        {% for info in line_chart %}
+                series_data.push("{{ info.xxx }}")
+                xAxis_data.push("{{ info.yyy }}")
+        {% endfor %}
+        {#可视化展示选项#}
+        var option = {
+                xAxis: {
+                        type: 'category',
+                        data: xAxis_data
+                },
+                yAxis: {
+                        type: 'value'
+                },
+                series: [{
+                        data: series_data,
+                        type: 'line',
+                        itemStyle: {
+                                normal: {
+                                        label: {
+                                                show: true, //开启显示
+                                                position: 'top', //在上方显示
+                                                textStyle: { //数值样式
+                                                        color: 'black',
+                                                        fontSize: 16
+                                                }
+                                        }
+                                }
+                        },
+                }]
+        };
+        {#将 echarts对象与展示选项结合起来#}
+        mychart.setOption(option);
+</script>{% endcomment %}
+    <!--html调用bootstrap-->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1-dist/css/bootstrap-theme.css' %}">
+</head>
+<body>
+<h1>hello world</h1>
+
+<div id="lchart"></div>
+<div id="main1" style="height: 600px"></div>
+
+<input type="text" value="新建" class="btn btn-primary"/>
+</body>
+</html>
+
+{% comment %}
+<script type="text/javascript">
+    $('h1').text("world hello");
+</script>
+
+<script>
+    var myChart3 = echarts.init(document.getElementById('main1'));
+
+    option = {
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'horizontal',
+            top: 'bottom',
+            padding: 0,
+        },
+        toolbox: {
+            show: true,
+            right: 50,
+            feature: {
+                dataView: {readOnly: false},
+                saveAsImage: {}, //保存为图片
+            }
+        },
+        series: [
+            {
+                name: '搜索类型频率',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center',
+                    emphasis: {
+                        show: true
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold',
+                    }
+                },
+                data: [
+                    {value: 1048, name: 'Search Engine'},
+                    {value: 735, name: 'Direct'},
+                    {value: 580, name: 'Email'},
+                    {value: 484, name: 'Union Ads'},
+                    {value: 300, name: 'Video Ads'}
+                ]
+            }
+        ]
+    };
+
+    {#console.log(data);#}
+    myChart3.setOption(option);
+
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+// 绘制图表
+myChart.setOption({
+  title: {
+    text: 'ECharts 入门示例'
+  },
+  tooltip: {},
+  xAxis: {
+    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+  },
+  yAxis: {},
+  series: [
+    {
+      name: '销量',
+      type: 'bar',
+      data: [5, 20, 36, 10, 10, 20]
+    }
+  ]
+});
+</script>{% endcomment %}

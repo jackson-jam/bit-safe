@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>User Search</h1>
+
+<form method="get" action="{% url 'user_search' %}">
+  <input type="text" name="q" placeholder="Search by username..." value="{{ query }}">
+  <button type="submit">Search</button>
+</form>
+
+{% if users %}
+<ul>
+  {% for user in users %}
+  <li>{{ user.name }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No results found.</p>
+{% endif %}
+{% endblock %}
